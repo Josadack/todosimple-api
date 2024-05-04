@@ -21,7 +21,7 @@ public class TaskService {
 	@Autowired
 	private UserService userService;
 	
-	public Task findyId(Long id) {
+	public Task findyId(long id) {
 		Optional<Task> task = this.taskRepository.findById(id);
 		return task.orElseThrow(() -> new RuntimeException( 
 				"Tarefa não encontrada! id:" + id +", Tipo: " + Task.class.getName()));
